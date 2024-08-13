@@ -8,6 +8,7 @@ bool v[mxN], exhaust[mxN], in[mxN];
 vector<vector<int>> ans;
 map<pair<int, int>, bool> used;
 void dfs(int u, int p){
+    //solve it for each vertex and pick greedily :D
     in[u] = v[u] = true;
     int last = 0;
     for(const auto& x: grid[u]){
