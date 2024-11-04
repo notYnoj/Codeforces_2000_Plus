@@ -52,7 +52,20 @@ void solve(){
         cout<<ans[b[i]]<<" ";
     }
     cout<<'\n';
-
+/*
+0,1,2... mid
+0 -i
+i - 2i
+2i-3i
+...
+n-1i - ni
+Helped Linnrue!
+were just looking for 0..mid
+i...i+mid
+...
+add all of those up see if its greater than n/2
+then its godo!
+    */
 
 }
 int main(){
