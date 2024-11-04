@@ -18,6 +18,9 @@ void solve(){
     cin>>n>>q;
     vector<int> a(n), b(q), c(n+1, 0LL), ans(n+1);
     for(int i = 0; i<n; i++){ cin>>a[i]; c[a[i]]++;}
+    for(int i = 0; i<q; i++){
+        cin>>b[i];
+    }
     for(int i = 1; i<=n; i++){
         c[i] += c[i-1];
     }
@@ -29,7 +32,7 @@ void solve(){
         while(l<r){
             int mid = (l+r)/2;
             int cnt = 0;
-            for(int mod_n = 1; mod_n<=mod_n*i; mod_n++){
+            for(int mod_n = 0; mod_n*i<=n; mod_n++){
                 cnt+=c[min(i*mod_n+mid, n)] - (i*mod_n-1>0?c[i*mod_n-1]:0);
             }
             if(cnt-1>=n/2){
@@ -37,12 +40,7 @@ void solve(){
             }else{
                 l = mid+1;
             }
-            ans[i] = l;
-
         }
-
-
-
         ans[i] = l;
     }
 
