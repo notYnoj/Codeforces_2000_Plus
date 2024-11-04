@@ -22,9 +22,10 @@ std::ostream& operator<<(std::ostream& os, const T (&arr)[N]) {
 void solve(){
     int n,q;
     cin>>n>>q;
-    vector<int> a(n), b(q);
+    vector<int> a(n), b(q), c(n+1, 0LL);
     for(int i = 0; i<n; i++) cin>>a[i];
     for(int i = 0; i<q; i++) cin>>b[i];
+
 
 }
 int main(){
