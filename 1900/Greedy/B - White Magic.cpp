@@ -22,10 +22,7 @@ void solve(int tc){
     cin>>n;
     vi a(n);
     for(int&i : a) cin>>i;
-    /*if(tc == 10000-4125){
-        cout<<n<<a<<endl;
-        return;
-    }*/
+
     //i can have the starting number be my biggest one then i can either have at max
     int numz = 0;
     vi b(n, INT_MAX);
